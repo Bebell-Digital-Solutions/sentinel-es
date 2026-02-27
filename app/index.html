@@ -63,7 +63,7 @@
             margin: 0;
         }
 
-        /* Utility classes to map user's exact classes to CSS variables */
+        /* Utility classes */
         .text-text-main { color: var(--text-main); }
         .text-text-muted { color: var(--text-muted); }
 
@@ -241,21 +241,20 @@
             z-index: 10000; display: none; align-items: center; justify-content: center;
         }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: blur(8px);
-    z-index: 10000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
 
-        
         .modal-content {
             background: var(--bg-card); width: 90%; max-width: 800px; height: 80vh;
             border: 1px solid var(--primary); border-radius: 16px; position: relative;
@@ -330,7 +329,7 @@
         }
 
         /* =========================================
-           TOOL CARDS (used in Tools & Links sections)
+           TOOL CARDS
            ========================================= */
         .tool-card {
             display: flex;
@@ -480,7 +479,7 @@
         }
 
         /* =========================================
-           BANNER SECTION (Password Tool)
+           BANNER SECTION
            ========================================= */
         .banner-section {
             background: linear-gradient(135deg, rgba(255, 80, 17, 0.15) 0%, rgba(255, 122, 51, 0.05) 100%);
@@ -600,7 +599,7 @@
         }
 
         /* =========================================
-           CHECKBOXES (already defined, but ensure consistency)
+           CHECKBOXES
            ========================================= */
         input[type="checkbox"].task-checkbox {
             appearance: none;
@@ -656,7 +655,6 @@
             .sidebar.open ~ #sidebar-overlay { display: block; }
         }
 
-        /* Scale down slightly on very small phones */
         @media (max-width: 480px) {
             .menu-toggle {
                 width: 38px;
@@ -756,7 +754,7 @@
                             <i data-lucide="file-text" class="w-5 h-5 mr-3 nav-icon"></i> Informes y Recursos
                         </li>
                         
-                        <!-- New Demo Tool Buttons -->
+                        <!-- Demo Tool Buttons -->
                         <li class="nav-item" data-section="demo-tool-1" tabindex="0">
                             <i data-lucide="bot" class="w-5 h-5 mr-3 nav-icon"></i> Asistente de Privacidad
                         </li>
@@ -806,110 +804,102 @@
                 <!-- Default Content before Fetch executes -->
                 <div class="card">
                     <!-- Overview Section Content Fragment -->
-    <h1 class="text-3xl font-bold mb-4 text-text-main">Visión General</h1>
-    <p class="text-lg text-text-muted mb-6">Comprende el camino que tienes por delante para asegurar tu vida digital e información privada.</p>
-    
-    <!-- VIDEO CONTAINER (Responsive 1920x1080px ratio) -->
-    <div class="w-full aspect-video bg-black rounded-2xl shadow-lg mb-8 overflow-hidden relative" id="video-container">
-        <!-- Video Thumbnail -->
-        <div id="video-thumbnail" class="absolute inset-0 w-full h-full flex items-center justify-center cursor-pointer bg-cover bg-center z-10">
-            <!-- Add your thumbnail image URL here -->
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/AIM-Thumbnails_1.gif?v=1768770938" 
-                 alt="Video thumbnail" 
-                 class="absolute inset-0 w-full h-full object-cover">
-            
-            <!-- Play Button with White Background ONLY Behind the Triangle -->
-            <div class="relative z-20 hover:scale-110 transition-all duration-300">
-                <!-- White circle positioned behind just the play triangle -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="bg-white h-10 w-10 rounded-full"></div>
+                    <h1 class="text-3xl font-bold mb-4 text-text-main">Visión General</h1>
+                    <p class="text-lg text-text-muted mb-6">Comprende el camino que tienes por delante para asegurar tu vida digital e información privada.</p>
+                    
+                    <!-- VIDEO CONTAINER -->
+                    <div class="w-full aspect-video bg-black rounded-2xl shadow-lg mb-8 overflow-hidden relative" id="video-container">
+                        <!-- Video Thumbnail -->
+                        <div id="video-thumbnail" class="absolute inset-0 w-full h-full flex items-center justify-center cursor-pointer bg-cover bg-center z-10">
+                            <div class="absolute inset-0 bg-black opacity-40"></div>
+                            <img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/AIM-Thumbnails_1.gif?v=1768770938" 
+                                 alt="Miniatura del video" 
+                                 class="absolute inset-0 w-full h-full object-cover">
+                            
+                            <!-- Play Button -->
+                            <div class="relative z-20 hover:scale-110 transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="bg-white h-10 w-10 rounded-full"></div>
+                                </div>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 relative z-10" viewBox="0 0 20 20" fill="#ff5011">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            
+                            <div class="absolute bottom-6 left-6 z-20 text-white">
+                                <h4 class="text-xl font-bold">Visión General de Seguridad</h4>
+                                <p class="text-white/80">Haz clic para reproducir</p>
+                            </div>
+                        </div>
+                        
+                        <video id="overview-video" controls class="w-full h-full object-cover hidden">
+                            <source src="https://cdn.shopify.com/videos/c/o/v/a9fe271f1ea34fb68198e50a30f2a1c9.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Qué es esto</h3>
+                    <p class="mb-4 text-text-muted">Este panel es tu guía personal para mejorar tu privacidad y seguridad en línea. Desglosa temas complejos en pasos simples y prácticos que puedes realizar ahora mismo.</p>
+
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Definición sencilla</h3>
+                    <p class="mb-4 text-text-muted">Un plan guiado que te ayuda a implementar medidas de seguridad prácticas a través de instrucciones claras y acciones confirmadas.</p>
+
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Por qué es importante</h3>
+                    <p class="mb-4 text-text-muted">En el mundo digital actual, proteger tu información personal y tus cuentas en línea es crucial. Tomar medidas proactivas puede prevenir el robo de identidad, el fraude financiero y las filtraciones de privacidad.</p>
+
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Explicación de riesgos reales con ejemplos concretos</h3>
+                    <p class="mb-4 text-text-muted">Sin una seguridad adecuada, corres el riesgo de perder el acceso a tus cuentas, de que te roben tu identidad o de que tus datos personales queden expuestos. Por ejemplo, una contraseña débil podría provocar que pirateen tu correo electrónico, lo que luego da acceso a los atacantes a tu banca, redes sociales y otros servicios críticos. El rastreo no controlado puede llevar a publicidad altamente personalizada y manipuladora, o incluso a la venta de datos a terceros sin tu consentimiento explícito.</p>
+
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Qué hacer</h3>
+                    <p class="mb-4 text-text-muted">Navega por cada sección, lee las instrucciones y completa las listas de verificación. Tu progreso se guardará a medida que confirmes cada acción.</p>
+
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Lista de verificación de acciones ordenada con casillas</h3>
+                    <ul class="list-none p-0 space-y-3">
+                        <li class="flex items-start gap-3">
+                            <input type="checkbox" id="overview-action1" class="task-checkbox" disabled>
+                            <label for="overview-action1" class="text-text-muted cursor-not-allowed">Lee la sección "Qué es esto".</label>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <input type="checkbox" id="overview-action2" class="task-checkbox" disabled>
+                            <label for="overview-action2" class="text-text-muted cursor-not-allowed">Comprende la explicación de "Por qué es importante".</label>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <input type="checkbox" id="overview-action3" class="task-checkbox" disabled>
+                            <label for="overview-action3" class="text-text-muted cursor-not-allowed">Familiarízate con la navegación de la izquierda.</label>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-text-main mt-6 mb-3">Punto de parada claro</h3>
+                    <p class="mb-4 text-text-muted">Has revisado con éxito el propósito y la estructura del panel. Continúa a la siguiente sección para comenzar a tomar medidas.</p>
+
+                    <h3 class="text-xl font-semibold text-text-main mb-3">Herramientas y enlaces</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="https://www.cisa.gov/cyber-safety" target="_blank" class="tool-card group">
+                            <img src="https://www.google.com/s2/favicons?domain=cisa.gov&sz=64" class="w-10 h-10 rounded-md bg-white p-1 flex-shrink-0" alt="Icono">
+                            <div class="flex-1">
+                                <h4 class="text-text-main font-semibold group-hover:text-primary transition-colors">Consejos de Seguridad CISA</h4>
+                                <p class="text-sm text-text-muted mt-1">Mejores prácticas generales para la seguridad en línea.</p>
+                                <span class="text-xs text-primary mt-2 inline-block font-semibold">Visitar Recurso →</span>
+                            </div>
+                        </a>
+                        <a href="https://ssd.eff.org/" target="_blank" class="tool-card group">
+                            <img src="https://www.google.com/s2/favicons?domain=eff.org&sz=64" class="w-10 h-10 rounded-md bg-white p-1 flex-shrink-0" alt="Icono">
+                            <div class="flex-1">
+                                <h4 class="text-text-main font-semibold group-hover:text-primary transition-colors">Autodefensa Contra la Vigilancia</h4>
+                                <p class="text-sm text-text-muted mt-1">La guía de la EFF para defenderte de la vigilancia.</p>
+                                <span class="text-xs text-primary mt-2 inline-block font-semibold">Visitar Recurso →</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-text-main mt-6 mb-3">Errores comunes escritos como advertencias</h3>
+                    <ul class="list-disc list-inside text-red-500 space-y-2">
+                        <li><strong>Advertencia:</strong> Saltar secciones dejará lagunas en tu protección.</li>
+                        <li><strong>Advertencia:</strong> Asumir que ya estás seguro sin verificar las acciones.</li>
+                    </ul>
                 </div>
-                
-                <!-- Play Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 relative z-10" viewBox="0 0 20 20" fill="#ff5011">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                </svg>
             </div>
-            
-            <!-- Optional: Video title overlay -->
-            <div class="absolute bottom-6 left-6 z-20 text-white">
-                <h4 class="text-xl font-bold">Visión General de Seguridad</h4>
-                <p class="text-white/80">Haz clic para reproducir</p>
-            </div>
-        </div>
-        
-        <!-- Video Element (Hidden by default) -->
-        <video id="overview-video" controls class="w-full h-full object-cover hidden">
-            <!-- Placeholder Video Source (Replace with your actual video file path) -->
-            <source src="https://cdn.shopify.com/videos/c/o/v/a9fe271f1ea34fb68198e50a30f2a1c9.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-    </div>
-    
-
-    
-    <h3 class="text-xl font-semibold text-text-main mb-3">Qué es esto</h3>
-    <p class="mb-4 text-text-muted">Este panel es tu guía personal para mejorar tu privacidad y seguridad en línea. Desglosa temas complejos en pasos simples y prácticos que puedes realizar ahora mismo.</p>
-
-    <h3 class="text-xl font-semibold text-text-main mb-3">Definición sencilla</h3>
-    <p class="mb-4 text-text-muted">Un plan guiado que te ayuda a implementar medidas de seguridad prácticas a través de instrucciones claras y acciones confirmadas.</p>
-
-    <h3 class="text-xl font-semibold text-text-main mb-3">Por qué es importante</h3>
-    <p class="mb-4 text-text-muted">En el mundo digital actual, proteger tu información personal y tus cuentas en línea es crucial. Tomar medidas proactivas puede prevenir el robo de identidad, el fraude financiero y las filtraciones de privacidad.</p>
-
-    <h3 class="text-xl font-semibold text-text-main mb-3">Explicación de riesgos reales con ejemplos concretos</h3>
-    <p class="mb-4 text-text-muted">Sin una seguridad adecuada, corres el riesgo de perder el acceso a tus cuentas, de que te roben tu identidad o de que tus datos personales queden expuestos. Por ejemplo, una contraseña débil podría provocar que pirateen tu correo electrónico, lo que luego da acceso a los atacantes a tu banca, redes sociales y otros servicios críticos. El rastreo no controlado puede llevar a publicidad altamente personalizada y manipuladora, o incluso a la venta de datos a terceros sin tu consentimiento explícito.</p>
-
-    <h3 class="text-xl font-semibold text-text-main mb-3">Qué hacer</h3>
-    <p class="mb-4 text-text-muted">Navega por cada sección, lee las instrucciones y completa las listas de verificación. Tu progreso se guardará a medida que confirmes cada acción.</p>
-
-    <h3 class="text-xl font-semibold text-text-main mb-3">Lista de verificación de acciones ordenada con casillas</h3>
-    <ul class="list-none p-0 space-y-3">
-        <li class="flex items-start gap-3">
-            <input type="checkbox" id="overview-action1" class="task-checkbox" disabled>
-            <label for="overview-action1" class="text-text-muted cursor-not-allowed">Lee la sección "Qué es esto".</label>
-        </li>
-        <li class="flex items-start gap-3">
-            <input type="checkbox" id="overview-action2" class="task-checkbox" disabled>
-            <label for="overview-action2" class="text-text-muted cursor-not-allowed">Comprende la explicación de "Por qué es importante".</label>
-        </li>
-        <li class="flex items-start gap-3">
-            <input type="checkbox" id="overview-action3" class="task-checkbox" disabled>
-            <label for="overview-action3" class="text-text-muted cursor-not-allowed">Familiarízate con la navegación de la izquierda.</label>
-        </li>
-    </ul>
-
-    <h3 class="text-xl font-semibold text-text-main mt-6 mb-3">Punto de parada claro</h3>
-    <p class="mb-4 text-text-muted">Has revisado con éxito el propósito y la estructura del panel. Continúa a la siguiente sección para comenzar a tomar medidas.</p>
-
-    <h3 class="text-xl font-semibold text-text-main mb-3">Herramientas y enlaces</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <a href="https://www.cisa.gov/cyber-safety" target="_blank" class="tool-card group">
-            <img src="https://www.google.com/s2/favicons?domain=cisa.gov&sz=64" class="w-10 h-10 rounded-md bg-white p-1 flex-shrink-0" alt="Icon">
-            <div class="flex-1">
-                <h4 class="text-text-main font-semibold group-hover:text-primary transition-colors">Consejos de Seguridad CISA</h4>
-                <p class="text-sm text-text-muted mt-1">Mejores prácticas generales para la seguridad en línea.</p>
-                <span class="text-xs text-primary mt-2 inline-block font-semibold">Visitar Recurso →</span>
-            </div>
-        </a>
-        <a href="https://ssd.eff.org/" target="_blank" class="tool-card group">
-            <img src="https://www.google.com/s2/favicons?domain=eff.org&sz=64" class="w-10 h-10 rounded-md bg-white p-1 flex-shrink-0" alt="Icon">
-            <div class="flex-1">
-                <h4 class="text-text-main font-semibold group-hover:text-primary transition-colors">Autodefensa Contra la Vigilancia</h4>
-                <p class="text-sm text-text-muted mt-1">La guía de la EFF para defenderte de la vigilancia.</p>
-                <span class="text-xs text-primary mt-2 inline-block font-semibold">Visitar Recurso →</span>
-            </div>
-        </a>
-    </div>
-
-    <h3 class="text-xl font-semibold text-text-main mt-6 mb-3">Errores comunes escritos como advertencias</h3>
-    <ul class="list-disc list-inside text-red-500 space-y-2">
-        <li><strong>Advertencia:</strong> Saltar secciones dejará lagunas en tu protección.</li>
-        <li><strong>Advertencia:</strong> Asumir que ya estás seguro sin verificar las acciones.</li>
-    </ul>
-</div>
-            <!-- End Dynamic Container -->
 
             <!-- Main Content Footer -->
             <footer class="mt-12 pt-8 pb-4 text-xs text-center text-text-muted border-t border-[var(--border)] font-[var(--font-code)]">
@@ -919,17 +909,17 @@
         </main>
     </div>
 
-<!-- Password Tool Modal -->
-<div id="tool-modal-overlay" class="modal-overlay">
-    <div class="modal-content">
-        <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
-        <div class="modal-iframe-wrapper">
-            <iframe id="toolIframe" data-src="https://bebell-digital-solutions.github.io/security-dashboard/app/pass-strength-shield" title="Escudo de Fortaleza de Contraseñas"></iframe>
+    <!-- Password Tool Modal -->
+    <div id="tool-modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="modal-close-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-iframe-wrapper">
+                <iframe id="toolIframe" data-src="https://bebell-digital-solutions.github.io/security-dashboard/app/pass-strength-shield" title="Escudo de Fortaleza de Contraseñas"></iframe>
+            </div>
         </div>
     </div>
-</div>
 
-      <!-- App Logic Scripts -->
+    <!-- App Logic Scripts -->
     <script>
         // ==========================================
         // CONFIGURATION
@@ -943,7 +933,7 @@
             initMobileSidebar();
             bindCheckboxes();
             updateGlobalProgress();
-            initVideoThumbnails(); // Initialize video thumbnails for default content
+            initVideoThumbnails();
 
             // Map Data-Section Navigation Events
             const navItems = document.querySelectorAll('.nav-item');
@@ -951,19 +941,19 @@
                 item.addEventListener('click', function() {
                     const section = this.getAttribute('data-section');
                     if (section) {
-                        // Map section names to file paths (all in same /app/ folder)
+                        // Map section names to Spanish file names
                         const sectionMap = {
-                            'overview': 'overview.html',
-                            'email-identity': 'email-identity.html',
-                            'password-strategy': 'password-strategy.html',
-                            'two-factor-protection': 'two-factor-protection.html',
-                            'scam-fraud-awareness': 'scam-fraud-awareness.html',
-                            'inbox-account-cleanup': 'inbox-account-cleanup.html',
-                            'breach-detection': 'breach-detection.html',
-                            'tracking-cookies-ads': 'tracking-cookies-ads.html',
-                            'reports-resources': 'reports-resources.html',
-                            'demo-tool-1': 'privacy-coach.html',
-                            'demo-tool-2': 'download-guide.html'
+                            'overview': 'vision-general.html',
+                            'email-identity': 'email-como-identidad.html',
+                            'password-strategy': 'estrategia-contrasenas.html',
+                            'two-factor-protection': 'proteccion-dos-factores.html',
+                            'scam-fraud-awareness': 'estafas-fraudes.html',
+                            'inbox-account-cleanup': 'limpieza-bandeja.html',
+                            'breach-detection': 'deteccion-filtraciones.html',
+                            'tracking-cookies-ads': 'rastreo-anuncios.html',
+                            'reports-resources': 'informes-recursos.html',
+                            'demo-tool-1': 'asistente-privacidad.html',
+                            'demo-tool-2': 'descargar-guia.html'
                         };
                         const filePath = sectionMap[section] || section + '.html';
                         loadContent(filePath, this);
@@ -1092,13 +1082,11 @@
         // VIDEO THUMBNAIL INITIALIZATION
         // ==========================================
         function initVideoThumbnails() {
-            // Initialize all video containers with thumbnails
             document.querySelectorAll('#video-container').forEach(container => {
                 const thumbnail = container.querySelector('#video-thumbnail');
                 const video = container.querySelector('#overview-video');
                 
                 if (thumbnail && video) {
-                    // Remove existing listeners by cloning
                     const newThumbnail = thumbnail.cloneNode(true);
                     thumbnail.parentNode.replaceChild(newThumbnail, thumbnail);
                     
@@ -1112,10 +1100,9 @@
         }
 
         // ==========================================
-        // DYNAMIC COMPONENTS (Carousels & Video Thumbnails for loaded content)
+        // DYNAMIC COMPONENTS
         // ==========================================
         function initDynamicComponents() {
-            // Initialize carousels
             document.querySelectorAll('.carousel-container').forEach(container => {
                 const track = container.querySelector('.carousel-track');
                 const slides = track ? track.children : [];
@@ -1146,7 +1133,6 @@
                 }
             });
             
-            // Initialize video thumbnails in dynamically loaded content
             initVideoThumbnails();
         }
 
@@ -1259,7 +1245,6 @@
         // ==========================================
         // MODAL LOGIC FOR PASSWORD TOOL
         // ==========================================
-        // Global click handler for open button (works with dynamically loaded content)
         document.addEventListener('click', function(e) {
             const openBtn = e.target.closest('#openToolBtn');
             if (openBtn) {
@@ -1271,7 +1256,6 @@
                 
                 if (!modal || !iframe) return;
                 
-                // Set the iframe source
                 if (!iframe.src || iframe.src === window.location.href) {
                     iframe.src = iframe.getAttribute('data-src') || 'pass-strength-shield.html';
                 }
@@ -1281,9 +1265,7 @@
             }
         });
 
-        // Close modal handlers
         document.addEventListener('click', function(e) {
-            // Close button
             if (e.target.closest('#closeModalBtn')) {
                 const modal = document.getElementById('tool-modal-overlay');
                 if (modal) {
@@ -1292,7 +1274,6 @@
                 }
             }
             
-            // Click outside modal content
             if (e.target.classList.contains('modal-overlay')) {
                 const modal = document.getElementById('tool-modal-overlay');
                 if (modal) {
@@ -1302,7 +1283,6 @@
             }
         });
 
-        // Handle window resize for matrix canvas
         window.addEventListener('resize', function() {
             const canvas = document.getElementById('matrixCanvas');
             if (canvas) {
